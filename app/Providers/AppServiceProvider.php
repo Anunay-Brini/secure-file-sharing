@@ -22,6 +22,16 @@ class AppServiceProvider extends ServiceProvider
         // Auto-run migrations for Laravel Cloud or local environments if not already migrated 
         // to prevent 500 server errors on the first load due to missing sessions/users tables.
         try {
+            $dbConnection = config('database.default');
+            
+            // If using SQLite safely ensure the file exists so it doesn't crash
+            if ($dbConnection === 'sqlite') {
+                $dbPath = config('database.connections.sqlite.database');
+                if (is_string($dbPath) && $dbPath !== ':memory:' && !file_exists($dbPath)) {
+                    touch($dbPath);
+                }
+            }
+
             if (! \Illuminate\Support\Facades\Schema::hasTable('migrations')) {
                 \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
             }
