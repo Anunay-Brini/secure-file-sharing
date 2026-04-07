@@ -16,10 +16,10 @@
         
         <div x-data="shareViewer()" class="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             <!-- Header Banner -->
-            <div class="h-32 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 relative">
+            <div class="h-32 bg-gradient-to-br from-emerald-600 via-green-600 to-teal-500 relative">
                 <div class="absolute inset-0 bg-black/10"></div>
                 <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
                     </div>
                 </div>
@@ -65,18 +65,18 @@
                     <button 
                         @click="startDownload" 
                         x-show="!isDownloading && !isDownloaded"
-                        class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg shadow-indigo-200 transition duration-300 flex items-center justify-center space-x-2">
+                        class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-lg shadow-emerald-200 transition duration-300 flex items-center justify-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         <span>Download Securely</span>
                     </button>
 
                     <!-- Loading State -->
                     <div x-show="isDownloading" class="flex flex-col items-center justify-center py-4 space-y-4">
-                        <svg class="animate-spin h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <svg class="animate-spin h-8 w-8 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <p class="text-sm font-medium text-indigo-600" x-text="statusText"></p>
+                        <p class="text-sm font-medium text-emerald-600" x-text="statusText"></p>
                     </div>
 
                     <!-- Success State -->
@@ -87,7 +87,7 @@
                         <h3 class="text-xl font-bold text-gray-800">Download Complete</h3>
                         <p class="text-gray-500 text-sm">Your file was decrypted successfully on your device.</p>
                         
-                        <button @click="resetView" class="mt-4 text-indigo-600 font-medium text-sm hover:underline">
+                        <button @click="resetView" class="mt-4 text-emerald-600 font-medium text-sm hover:underline">
                             Download Again
                         </button>
                     </div>
