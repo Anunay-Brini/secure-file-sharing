@@ -1,11 +1,11 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
    <defs>
     <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="100%" stop-color="#3b82f6" />
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#4f46e5" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#059669" flood-opacity="0.5"/>
     </filter>
   </defs>
   
@@ -18,6 +18,6 @@
   <rect x="23" y="45" width="54" height="36" rx="8" fill="white"/>
   
   <!-- Keyhole -->
-  <rect x="47" y="54" width="6" height="10" rx="3" fill="#4f46e5"/>
-  <circle cx="50" cy="56" r="4" fill="#4f46e5"/>
+  <rect x="47" y="54" width="6" height="10" rx="3" fill="#059669"/>
+  <circle cx="50" cy="56" r="4" fill="#059669"/>
 </svg>

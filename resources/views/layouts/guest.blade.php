@@ -27,9 +27,9 @@
     <body class="font-sans text-gray-900 antialiased bg-gray-50 relative overflow-hidden">
         
         <!-- Background Decors -->
-        <div class="fixed top-0 left-0 -ml-48 -mt-48 w-96 h-96 rounded-full bg-indigo-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="fixed top-1/2 right-0 w-96 h-96 rounded-full bg-purple-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 2s;"></div>
-        <div class="fixed bottom-0 left-1/2 w-96 h-96 rounded-full bg-blue-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 4s;"></div>
+        <div class="fixed top-0 left-0 -ml-48 -mt-48 w-96 h-96 rounded-full bg-emerald-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="fixed top-1/2 right-0 w-96 h-96 rounded-full bg-green-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 2s;"></div>
+        <div class="fixed bottom-0 left-1/2 w-96 h-96 rounded-full bg-teal-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 4s;"></div>
 
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 relative z-10">
             <div class="mb-4">
@@ -42,7 +42,7 @@
 
             <div class="w-full sm:max-w-md px-10 py-8 bg-white/80 backdrop-blur-xl shadow-2xl overflow-hidden sm:rounded-3xl border border-white/60">
                 <div class="text-center mb-8">
-                    <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-indigo-800">Welcome to {{ config('app.name', 'ZK FileShare') }}</h2>
+                    <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-emerald-800">Welcome to {{ config('app.name', 'ZK FileShare') }}</h2>
                     <p class="text-gray-500 text-sm mt-2">Zero-Knowledge Encrypted Sharing</p>
                 </div>
                 

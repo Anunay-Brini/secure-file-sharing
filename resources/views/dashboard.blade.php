@@ -7,17 +7,17 @@
             <!-- Upload Area -->
             <div class="bg-white/80 backdrop-blur-md overflow-hidden shadow-xl sm:rounded-2xl border border-gray-100">
                 <div class="p-8 text-gray-900 flex flex-col items-center justify-center" x-bind:class="{'opacity-50 pointer-events-none': isUploading}">
-                    <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">Secure File Upload</h3>
+                    <h3 class="text-2xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent mb-4">Secure File Upload</h3>
                     <p class="text-gray-500 mb-8 text-center max-w-lg">Your file will be encrypted directly in your browser before it ever reaches our servers. We never see your data.</p>
                     
                     <div class="w-full max-w-md relative">
                         <div x-show="isUploading" class="absolute inset-0 flex items-center justify-center z-10 bg-white/50 backdrop-blur-sm rounded-xl">
-                            <svg class="animate-spin h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <svg class="animate-spin h-8 w-8 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                             </svg>
                         </div>
-                        <label class="flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-xl appearance-none cursor-pointer hover:border-indigo-500 focus:outline-none" :class="{ 'border-indigo-500 bg-indigo-50': isDragging }" @dragover.prevent="isDragging = true" @dragleave.prevent="isDragging = false" @drop.prevent="handleDrop($event)">
+                        <label class="flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-xl appearance-none cursor-pointer hover:border-emerald-500 focus:outline-none" :class="{ 'border-emerald-500 bg-emerald-50': isDragging }" @dragover.prevent="isDragging = true" @dragleave.prevent="isDragging = false" @drop.prevent="handleDrop($event)">
                             <span class="flex items-center space-x-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
@@ -36,17 +36,17 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <template x-for="file in decryptedFiles" :key="file.id">
-                        <div class="p-5 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow duration-300 bg-white group hover:border-indigo-300 relative">
+                        <div class="p-5 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow duration-300 bg-white group hover:border-emerald-300 relative">
                             <!-- Loading indicator for download -->
                             <div x-show="file._isDownloading" class="absolute inset-0 z-10 flex items-center justify-center bg-white/70 backdrop-blur-sm rounded-xl">
-                                <svg class="animate-spin h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg class="animate-spin h-6 w-6 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
                             </div>
 
                             <div class="flex items-center justify-between mb-4">
-                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                 </div>
                                 <button @click="confirmDeletePrompt(file.id)" class="text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -57,10 +57,10 @@
                             <p class="text-xs text-gray-500 mt-1" x-text="formatBytes(file.size)"></p>
                             
                             <div class="mt-4 flex space-x-2">
-                                <button @click="downloadFile(file)" class="flex-1 bg-indigo-50 text-indigo-600 rounded-lg py-2 text-sm font-medium hover:bg-indigo-100 transition disabled:opacity-50" :disabled="!file.decryptedName">
+                                <button @click="downloadFile(file)" class="flex-1 bg-emerald-50 text-emerald-600 rounded-lg py-2 text-sm font-medium hover:bg-emerald-100 transition disabled:opacity-50" :disabled="!file.decryptedName">
                                     Download
                                 </button>
-                                <button @click="createShareLink(file)" class="flex-1 border border-indigo-200 text-indigo-600 rounded-lg py-2 text-sm font-medium hover:bg-indigo-50 transition disabled:opacity-50" :disabled="!file.decryptedName">
+                                <button @click="createShareLink(file)" class="flex-1 border border-emerald-200 text-emerald-600 rounded-lg py-2 text-sm font-medium hover:bg-emerald-50 transition disabled:opacity-50" :disabled="!file.decryptedName">
                                     Share
                                 </button>
                             </div>
@@ -104,8 +104,8 @@
                     </button>
 
                     <div class="sm:flex sm:items-start">
-                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
-                            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-teal-100 sm:mx-0 sm:h-10 sm:w-10">
+                            <svg class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                             </svg>
                         </div>
@@ -118,8 +118,8 @@
                                 
                                 <div class="flex flex-col space-y-3">
                                     <div class="relative">
-                                        <input type="text" readonly x-model="generatedShareUrl" class="w-full pr-24 pl-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-                                        <button @click="copyToClipboard" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white rounded-lg px-3 py-1.5 text-xs font-semibold hover:bg-indigo-700 transition">
+                                        <input type="text" readonly x-model="generatedShareUrl" class="w-full pr-24 pl-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                                        <button @click="copyToClipboard" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-xs font-semibold hover:bg-emerald-700 transition">
                                             <span x-show="!copySuccess">Copy</span>
                                             <span x-show="copySuccess">Copied!</span>
                                         </button>
@@ -176,7 +176,7 @@
                     <button @click="executeDelete" type="button" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-red-600 to-rose-600 text-base font-medium text-white hover:from-red-700 hover:to-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                         Yes, delete it
                     </button>
-                    <button @click="deleteModalOpen = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                    <button @click="deleteModalOpen = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                         Cancel
                     </button>
                 </div>

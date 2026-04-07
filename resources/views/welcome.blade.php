@@ -8,7 +8,7 @@
         <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased text-gray-900 bg-gray-50 overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+    <body class="font-sans antialiased text-gray-900 bg-gray-50 overflow-x-hidden selection:bg-emerald-500 selection:text-white">
         
         <!-- Navbar -->
         <nav class="absolute top-0 left-0 right-0 z-50 py-6">
@@ -21,9 +21,9 @@
                 @if (Route::has('login'))
                     <div class="space-x-4">
                         @auth
-                            <a href="{{ url('/dashboard') }}" class="font-medium text-gray-600 hover:text-indigo-600 transition">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}" class="font-medium text-gray-600 hover:text-emerald-600 transition">Dashboard</a>
                         @else
-                            <a href="{{ route('login') }}" class="font-medium text-gray-600 hover:text-indigo-600 transition">Log in</a>
+                            <a href="{{ route('login') }}" class="font-medium text-gray-600 hover:text-emerald-600 transition">Log in</a>
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}" class="px-5 py-2.5 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition shadow-lg hover:shadow-xl">Get Started</a>
                             @endif
@@ -36,24 +36,24 @@
         <!-- Hero Section -->
         <main class="relative min-h-screen flex items-center pt-20">
             <!-- Background Decors -->
-            <div class="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 rounded-full bg-indigo-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-            <div class="absolute top-0 right-48 w-96 h-96 rounded-full bg-purple-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 2s;"></div>
-            <div class="absolute -bottom-8 left-20 w-96 h-96 rounded-full bg-blue-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 4s;"></div>
+            <div class="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 rounded-full bg-emerald-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute top-0 right-48 w-96 h-96 rounded-full bg-green-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 2s;"></div>
+            <div class="absolute -bottom-8 left-20 w-96 h-96 rounded-full bg-teal-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style="animation-delay: 4s;"></div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col md:flex-row items-center gap-12">
                 
                 <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                         <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
                         <span>100% Zero-Knowledge Architecture</span>
                     </div>
                     
                     <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
                         Share files with <br class="hidden md:block" />
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">Absolute Privacy</span>.
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-green-600">Absolute Privacy</span>.
                     </h1>
                     
                     <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
@@ -61,7 +61,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="{{ route('register') }}" class="px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-bold text-lg hover:from-indigo-700 hover:to-blue-700 transition shadow-lg shadow-indigo-200 transform hover:-translate-y-1">
+                        <a href="{{ route('register') }}" class="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-lg hover:from-emerald-700 hover:to-teal-700 transition shadow-lg shadow-emerald-200 transform hover:-translate-y-1">
                             Start Encrypting Free
                         </a>
                         <a href="#how-it-works" class="px-8 py-4 rounded-full bg-white border border-gray-200 text-gray-700 font-bold text-lg hover:bg-gray-50 transition">
@@ -88,13 +88,13 @@
                                 <p class="text-red-400">> Error: Unreadable block data.</p>
                                 <p>> Decrypting file payload...</p>
                                 <p class="text-red-400">> Error: Missing AES-256-GCM Key.</p>
-                                <p class="text-indigo-300 mt-4">> SYSTEM: Zero-Knowledge mechanism operating perfectly. Your data remains yours.</p>
+                                <p class="text-emerald-300 mt-4">> SYSTEM: Zero-Knowledge mechanism operating perfectly. Your data remains yours.</p>
                             </div>
                         </div>
                         
                         <div class="mt-6 flex justify-between items-center bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                             <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-indigo-100 rounded-full flex justify-center items-center text-indigo-600">
+                                <div class="w-10 h-10 bg-emerald-100 rounded-full flex justify-center items-center text-emerald-600">
                                     📁
                                 </div>
                                 <div>
@@ -102,7 +102,7 @@
                                     <p class="text-xs text-gray-500">Encrypted • 4.2 MB</p>
                                 </div>
                             </div>
-                            <button class="text-indigo-600 text-sm font-semibold hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition">Share securely</button>
+                            <button class="text-emerald-600 text-sm font-semibold hover:bg-emerald-50 px-3 py-1.5 rounded-lg transition">Share securely</button>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition duration-300 group">
-                        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">1. Locally Encrypted</h3>
@@ -128,7 +128,7 @@
                     </div>
                     
                     <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition duration-300 group">
-                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition">
+                        <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">2. Secret Share Links</h3>
@@ -136,7 +136,7 @@
                     </div>
 
                     <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition duration-300 group">
-                        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">3. We Are Blind</h3>
